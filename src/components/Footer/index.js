@@ -36,7 +36,7 @@ export default function Footer(props) {
         <Image src={Logo} alt="Logo Xadrez" width={500} height={300}/>
       </a>
       <p>
-        Orgulhosamente criado durante
+        Orgulhosamente criado pela <a href="https://github.com/REBECANONATO">Rebeca</a> durante
         {' '}
         a
         {' '}

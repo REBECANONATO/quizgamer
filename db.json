@@ -1,5 +1,6 @@
 {
-    "bg": "https://jooinn.com/images/chess-1.jpg",
+    "bg": "http://tpholic.com/xe/files/attach/images/76/257/821/003/chess01.jpg",
+    "bgQuiz": "http://tpholic.com/xe/files/attach/images/76/257/821/003/chess02.jpg",
     "title": "Quiz Gamer",
     "description": "Teste os seus conhecimentos sobre o Xadrez e vamos ver em quantas jogadas você consegue dar um Cheque-Mate!",
     "questions": [{
@@ -31,7 +32,7 @@
     "theme": {
         "colors": {
             "primary": "#004d40",
-            "secondary": "#880e4f",
+            "secondary": "#dfc8a8",
             "mainBg": "#171B35",
             "contrastText": "#FFFFFF",
             "wrong": "#FF5722",

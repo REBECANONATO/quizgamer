@@ -10,6 +10,8 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import Player from "../src/components/Player";
+import ListQuiz from "../src/components/ListQuiz";
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -52,11 +54,21 @@ export default function Home() {
           </Widget.Content>
         </Widget>
 
+        <Widget>
+          <Widget.Header>
+            <h1>Venha ver o quiz dos colegas</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <ListQuiz />
+          </Widget.Content>
+        </Widget>
+
         <Footer />
 
       </QuizContainer>
 
-      <GitHubCorner projectUrl="https://github.com/REBECANONATO" />
+      <GitHubCorner projectUrl="https://github.com/REBECANONATO/quizgamer" />
+      <Player />
 
     </QuizBackground>
   );

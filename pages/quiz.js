@@ -8,7 +8,7 @@ import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
-import Footer from '../src/components/Footer';
+import Player from "../src/components/Player";
 import GitHubCorner from '../src/components/GitHubCorner';
 
 export const QuizContainer = styled.div`
@@ -36,7 +36,7 @@ function QuizPage() {
   }, []);
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={db.bgQuiz}>
 
       <Head>
         <title>Xadrez Quiz</title>
@@ -65,7 +65,7 @@ function QuizPage() {
       </QuizContainer>
 
       <GitHubCorner projectUrl="https://github.com/REBECANONATO" />
-
+      <Player />
     </QuizBackground>
   );
 }
