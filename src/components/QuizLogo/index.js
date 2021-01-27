@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import LogoXadrez from '../../../public/img/logo.png';
+import LogoXadrez from '../../../assets/img/logo.png';
 
 
 

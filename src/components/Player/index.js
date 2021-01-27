@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import Song from "../../../public/audio/music.mp3";
+import Song from "../../../assets/audio/music.mp3";
 import { PlayFill } from "@styled-icons/bootstrap/PlayFill";
 import { PauseFill } from "@styled-icons/bootstrap/PauseFill";
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import Logo from '../../../public/img/logo.png';
+import Logo from '../../../assets/img/logo.png';
 
 // src/components/Footer/index.js
 const FooterWrapper = styled.footer`
