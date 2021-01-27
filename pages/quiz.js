@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
+
 import db from '../db.json';
-import NameInput from '../src/components/NameInput';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
@@ -22,10 +22,18 @@ export const QuizContainer = styled.div`
   }
 `;
 
-export default function Home() {
 
-  const router = useRouter();
-  const [name, setName] = React.useState('');
+function QuizPage() {
+  const [name, setName] = useState('');
+
+  useEffect(() => {
+    function getQueryName() {
+      const params = (new URL(window.location)).searchParams;
+      const nameFromQuery = params.get('name');
+      setName(nameFromQuery);
+    }
+    getQueryName();
+  }, []);
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -42,17 +50,17 @@ export default function Home() {
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>{db.description}</p>
+            <p>Bem vinda <b>{name}</b> está preparada para o Quiz?</p>
           </Widget.Content>
         </Widget>
 
         <Widget>
           <Widget.Content>
-            <NameInput />
+            Logo aqui estará o Quiz...
           </Widget.Content>
-        </Widget>
 
-        <Footer />
+        </Widget>
+        
 
       </QuizContainer>
 
@@ -61,3 +69,5 @@ export default function Home() {
     </QuizBackground>
   );
 }
+
+export default QuizPage;

@@ -1,4 +1,7 @@
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'next/image';
+import Logo from '../../../public/img/logo.png';
 
 // src/components/Footer/index.js
 const FooterWrapper = styled.footer`
@@ -29,8 +32,8 @@ export default function Footer(props) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+      <a href="">
+        <Image src={Logo} alt="Logo Xadrez" width={500} height={300}/>
       </a>
       <p>
         Orgulhosamente criado durante
