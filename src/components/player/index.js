@@ -21,7 +21,6 @@ export const Container = styled.div`
 	}
 `;
 
-
 function Player() {
 	const audioTrack = useRef();
 	const [song, setSong] = useState(true);
@@ -55,3 +54,4 @@ function Player() {
 }
 
 export default Player;
+//comentario
