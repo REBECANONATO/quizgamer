@@ -34,6 +34,8 @@ export default function Home() {
 
       <Head>
         <title>Xadrez Quiz</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+        <link rel="icon" href="favicon.png" type="image/png" />
       </Head>
 
       <QuizContainer>
@@ -45,11 +47,6 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
-          </Widget.Content>
-        </Widget>
-
-        <Widget>
-          <Widget.Content>
             <NameInput />
           </Widget.Content>
         </Widget>

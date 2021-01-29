@@ -1,34 +1,71 @@
 {
-    "bg": "http://tpholic.com/xe/files/attach/images/76/257/821/003/chess01.jpg",
-    "bgQuiz": "http://tpholic.com/xe/files/attach/images/76/257/821/003/chess02.jpg",
+    "bg": "https://cdnb.artstation.com/p/assets/images/images/014/237/521/original/carlos-mendes-render-gif.gif?1543135622",
+    "bgQuiz": "https://conteudo.imguol.com.br/c/tab//diversidade-trabalho/capa-tablet.gif",
     "title": "Quiz Gamer",
     "description": "Teste os seus conhecimentos sobre o Xadrez e vamos ver em quantas jogadas você consegue dar um Cheque-Mate!",
-    "questions": [{
-            "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-            "title": "Como fazer um seletor por id via CSS?",
-            "description": "Essa é pra aquecer",
-            "answer": 2,
+    "questions": [
+        {
+            "image": "https://i.makeagif.com/media/6-06-2015/CsdsU-.gif",
+            "title" : "Quantas casas têm no tabuleiro de xadrez?",
+            "description": "Você precisa conhecer o terreno que vai guerrear.",
+            "answer" : 2,
             "alternatives": [
-                ".elemento",
-                "*elemento",
-                "#elemento",
-                "%elemento"
+                "80 Casas.",
+                "84 Casas.",
+                "64 casas.",
+                "50 Casas."
             ]
         },
         {
-            "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-            "title": "Como fazer um background gradiente com css?",
-            "description": "Faz tempo em haha",
-            "answer": 0,
+            "image": "https://images.chesscomfiles.com/uploads/v1/blog/345780.24e4bef7.5000x5000o.a1f5b91805ac.gif",
+            "title" : "No jogo de xadrez, qual é a peça que move para frente e captura nas diagonais?",
+            "description": "Saiba exatamente as posições, caminhos e métodos de ataques dos seus soldados.",
+            "answer" : 0,
             "alternatives": [
-                "background: linear-gradient(#e66465, #9198e5);",
-                "background: gradient(#e66465, #9198e5);"
+                "Peão.",
+                "Bispo.",
+                "Dama.",
+                "Cavalo."
+            ]
+        },
+        {
+            "image": "https://www.boqnews.com/wp-content/uploads/2014/07/jogotabuleiro.gif",
+            "title" : "O que significa a expressão xeque-mate?",
+            "description": "Um bom guerreiro não se deixa intimidar pelo inimigo.",
+            "answer" : 2,
+            "alternatives": [
+                "Permissão para jogar outra vez.",
+                "O jogador está desistindo da partida.",
+                "Significa que o rei adversário está sob ataque e não tem como escapar.",
+                "Permissão para jogar outra vez."
+            ]
+        },
+        {
+            "image": "https://i.gifer.com/75zM.gif",
+            "title" : "Como o Rei se move no tabuleiro de xadrez?",
+            "description": "Um bom guerreiro não se deixa intimidar pelo inimigo.",
+            "answer" : 1,
+            "alternatives": [
+                "Ele pode se mover três casas por vez.",
+                "Uma casa por vez e para qualquer lugar.",
+                "Nas diagonais apenas.",
+                "Quantas casas quiser para qualquer direção."
+            ]
+        },
+        {
+            "image": "https://nsm08.casimages.com/img/2014/03/01/14030111552110190912024735.gif",
+            "title" : "Quando o peão chega até a última casa do tabuleiro do adversário, o que acontece?",
+            "description": "Importante sempre lembrar que em uma guerra cada soldado é importante.",
+            "answer" : 3,
+            "alternatives": [
+                "Outro peão entra em jogo.",
+                "Fim de jogo para o adversário.",
+                "Elimina-se uma peça qualquer do jogo do adversário.",
+                "Promoção do peão e ele é trocado por uma outra peça."
             ]
         }
     ],
-    "external": [
-        ""
-    ],
+    "external": [],
     "theme": {
         "colors": {
             "primary": "#004d40",

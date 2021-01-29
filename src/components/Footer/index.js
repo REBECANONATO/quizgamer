@@ -32,11 +32,15 @@ export default function Footer(props) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
-      <a href="">
+      <a href="#">
         <Image src={Logo} alt="Logo Xadrez" width={500} height={300}/>
       </a>
       <p>
-        Orgulhosamente criado pela <a href="https://github.com/REBECANONATO">Rebeca</a> durante
+        Orgulhosamente criado pela
+        {' '}
+        <b><a href="https://github.com/REBECANONATO">Rebeca</a></b>
+        {' '}
+        durante
         {' '}
         a
         {' '}

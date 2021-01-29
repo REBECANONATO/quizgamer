@@ -69,6 +69,10 @@ function ListQuiz() {
             <li>
                 <a href="https://alura-quiz-basquete.hermeshcg.vercel.app/">Basquete</a>
             </li>
+			<li>
+                <a href="https://alura-quizz-atrygykxf.vercel.app/">JavaScript</a>
+            </li>
+			
 		</List>
 	);
 }

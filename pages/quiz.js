@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { ReturnDownBack } from '@styled-icons/ionicons-outline/ReturnDownBack';
 
 
 import db from '../db.json';
@@ -10,6 +11,9 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Player from "../src/components/Player";
 import GitHubCorner from '../src/components/GitHubCorner';
+import Loading from '../src/components/Loading';
+import Result from '../src/components/Result';
+import Question from '../src/components/Question';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -22,9 +26,27 @@ export const QuizContainer = styled.div`
   }
 `;
 
+export const Form = styled.form`
+  
+`;
+
+const screenStates = {
+  QUIZ: 'QUIZ',
+  LOADING: 'LOADING',
+  RESULT: 'RESULT',
+};
+
+
 
 function QuizPage() {
+  const router = useRouter();
   const [name, setName] = useState('');
+  const [screenState, setScreenState] = React.useState(screenStates.LOADING);
+  const totalQuestions = db.questions.length;
+  const [currentQuestion, setCurrentQuestion] = React.useState(0);
+  const [results, setResult] = useState([]);
+  const questionIndex = currentQuestion;
+  const question = db.questions[questionIndex];
 
   useEffect(() => {
     function getQueryName() {
@@ -35,6 +57,30 @@ function QuizPage() {
     getQueryName();
   }, []);
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      setScreenState(screenStates.QUIZ);
+    }, 1 * 5000);
+  }, []);
+
+  function handleSetResult(result) {
+    setResult(results.concat([result]));
+  }
+
+  function handleSubmitQuiz() {
+    const nextQuestion = questionIndex + 1;
+    if (nextQuestion < totalQuestions) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setScreenState(screenStates.RESULT);
+    }
+  }
+
+  function submit(e) {
+    e.preventDefault();
+    router.push(`/`);
+  }
+
   return (
     <QuizBackground backgroundImage={db.bgQuiz}>
 
@@ -43,24 +89,28 @@ function QuizPage() {
       </Head>
 
       <QuizContainer>
+  
+        <Form onSubmit={submit}>
+          <button type="submit">
+            <ReturnDownBack size="24" />
+          </button>
+        </Form>
+
         <QuizLogo />
-        
-        <Widget>
-          <Widget.Header>
-            <h1>{db.title}</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>Bem vinda <b>{name}</b> está preparada para o Quiz?</p>
-          </Widget.Content>
-        </Widget>
 
-        <Widget>
-          <Widget.Content>
-            Logo aqui estará o Quiz...
-          </Widget.Content>
+        {screenState === screenStates.QUIZ && (
+          <Question
+            question={question}
+            questionIndex={questionIndex}
+            totalQuestions={totalQuestions}
+            onSubmit={handleSubmitQuiz}
+            onSetResult={handleSetResult}
+          />
+      )}
 
-        </Widget>
-        
+      {screenState === screenStates.LOADING && <Loading />}
+
+      {screenState === screenStates.RESULT && <Result result={results} />}      
 
       </QuizContainer>
 
